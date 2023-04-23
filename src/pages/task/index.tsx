@@ -33,6 +33,7 @@ const Task = (props: Props) => {
   const FetchTask = async (id: any) => {
     spinner.setLoadingState(true);
     const response = await useFetchTask(id);
+    console.log(response);
     setTask(response.data);
     spinner.setLoadingState(false);
   };

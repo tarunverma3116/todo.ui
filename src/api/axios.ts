@@ -2,7 +2,7 @@ import axios from 'axios';
 import { queryClient } from 'index';
 
 const defaultOptions = {
-  baseURL: process.env.REACT_APP_API_URL,
+  baseURL: process.env.REACT_APP_API_URL || 'http://13.127.162.64:8080/api/',
   headers: {
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': '*',
