@@ -3,12 +3,16 @@ import React from "react";
 import useGetTasks from "hooks/queries/useGetTasks";
 import LargeCard from "components/cards/LargeCard";
 import HeaderText from "components/header/HeaderText";
+import { useNavigate } from "react-router-dom";
+import PrimaryButton from "components/button/Button";
+import { IoMdAdd } from "react-icons/io";
 
 type Props = {};
 
 const AllTasks = (props: Props) => {
   const [tasks, setTasks] = React.useState<any[]>([]);
   const spinner = useSpinner();
+  const navigate = useNavigate();
 
   const HandleFetchTasks = async () => {
     spinner.setLoadingState(true);
@@ -35,6 +39,15 @@ const AllTasks = (props: Props) => {
             })}
         </div>
       )}
+      <PrimaryButton
+        className="flex items-center gap-2 mx-auto"
+        onClick={() => {
+          navigate("/add-task");
+        }}
+      >
+        Add Task
+        <IoMdAdd />
+      </PrimaryButton>
     </div>
   );
 };
