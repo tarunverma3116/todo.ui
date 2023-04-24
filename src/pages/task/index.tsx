@@ -88,7 +88,7 @@ const Task = (props: Props) => {
     <div className="w-full flex flex-col gap-6 lg:w-1/2 mx-auto">
       <HeaderText />
       {task && (
-        <div className="flex flex-row gap-6">
+        <div className="flex lg:flex-row flex-col gap-6">
           <div className="basis-1/3 flex flex-col items-center">
             <label className="text-sm text-white font-bold mb-1">FINISH</label>
             {task.status === "completed" ? (
@@ -104,7 +104,7 @@ const Task = (props: Props) => {
               </button>
             )}
           </div>
-          <div className="form-container basis-2/3 mx-auto">
+          <div className="form-container basis-2/3">
             <form onSubmit={handleSubmit(onSubmit)} className="">
               {/* {loginMutation?.error instanceof Error && <p>{loginMutation?.error?.response?.data?.message!}</p>} */}
               <div className="mb-6">

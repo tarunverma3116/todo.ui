@@ -1,7 +1,6 @@
 import api from "api/axios";
 import { useMutation } from "react-query";
 import { useNavigate } from "react-router-dom";
-
 interface ISignup {
   name: string;
   email: string;

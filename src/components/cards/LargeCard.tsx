@@ -11,7 +11,7 @@ const LargeCard = (props: Props) => {
   return (
     <div className="bg-white w-full h-[250px] p-3 pb-6 rounded-lg">
       <div className="flex flex-col h-full gap-3 items-center justify-between">
-        <div className="flex flex-col gap-2 w-full">
+        <div className="flex flex-col gap-2 w-full overflow-scroll">
           {props.task.status === "completed" ? (
             <p className="text-3xl text-green-500">
               <AiFillCheckCircle />

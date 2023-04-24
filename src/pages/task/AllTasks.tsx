@@ -28,7 +28,7 @@ const AllTasks = (props: Props) => {
       {tasks && tasks.length === 0 ? (
         <div className="text-center text-2xl font-bold">No Tasks Found</div>
       ) : (
-        <div className="w-full grid lg:grid-cols-4 grid-cols-2 gap-5">
+        <div className="w-full grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-5">
           {tasks &&
             tasks.map((task, key) => {
               return <LargeCard key={key} task={task} />;

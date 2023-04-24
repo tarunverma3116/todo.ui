@@ -11,7 +11,7 @@ const SmallCard = (props: Props) => {
   const navigate = useNavigate();
   return (
     <div className="bg-white w-full h-[80px] p-3 rounded-lg">
-      <div className="flex flex-row h-full gap-2 items-center justify-between">
+      <div className="flex flex-row h-full gap-2 items-center justify-between overflow-hidden">
         {props.task.status === "completed" ? (
           <p className="text-3xl text-green-500">
             <AiFillCheckCircle />
@@ -22,8 +22,8 @@ const SmallCard = (props: Props) => {
           </p>
         )}
         <div className="flex flex-col gap-1 text-left basis-3/4 text-black">
-          <div className="text-xl uppercase font-bold">{props.task.title}</div>
-          <div className="text-xs">{props.task.description}</div>
+          <p className="text-xl uppercase font-bold">{props.task.title}</p>
+          <p className="text-xs">{props.task.description}</p>
         </div>
         <PrimaryButton
           onClick={() => {

@@ -22,13 +22,13 @@
 }
 
 @media screen and (max-width: 768px) {
-  .App {
+  .app {
     padding: 2rem 3rem;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .App {
+  .app {
     padding: 1rem 2rem;
   }
 }

@@ -32,6 +32,11 @@ const Signup = (props: Props) => {
     spinner.setLoadingState(false);
   };
 
+  if (signupMutation.isSuccess) {
+    toast.success("Signup Successful");
+    navigate("/login");
+  }
+
   if (signupMutation.error) {
     const error = signupMutation.error as any;
     if (error.message === "Network Error") {
