@@ -5,10 +5,10 @@ type Props = {};
 
 const HeaderText = (props: Props) => {
   return (
-    <Link to="/home">
-      <p className="text-6xl font-bold text-white">
+    <Link to="/home" className="text-6xl font-bold text-white overflow-scroll">
+      <p>
         TODO
-        <span className="text-foreground-primary"> LIST</span>
+        <span className="text-foreground-primary">LIST</span>
       </p>
     </Link>
   );
