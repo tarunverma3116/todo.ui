@@ -18,11 +18,11 @@ export const PublicRoutes = (props: Props) => {
       <Route path="/signup" element={<Signup />} />
       <Route path="/" element={<Layout />}>
         <Route path="/home" element={<Home />} />
+        <Route path="/task/:id" element={<Task />} />
+        <Route path="/add-task" element={<Add />} />
+        <Route path="/tasks" element={<AllTasks />} />
+        <Route path="/profile" element={<Profile />} />
       </Route>
-      <Route path="/profile" element={<Profile />} />
-      <Route path="/task/:id" element={<Task />} />
-      <Route path="/add-task" element={<Add />} />
-      <Route path="/tasks" element={<AllTasks />} />
     </Routes>
   );
 };

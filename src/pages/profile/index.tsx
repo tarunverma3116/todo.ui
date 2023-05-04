@@ -1,15 +1,17 @@
 import HeaderText from "components/header/HeaderText";
-import { UserContext } from "context/UserProvider";
-import { useContext } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { SecondaryButton } from "components/button/Button";
 import { MdLogout } from "react-icons/md";
+import { useContext } from "react";
+import { UserContext } from "context/UserProvider";
 
 type Props = {};
 
 const Profile = (props: Props) => {
-  const { user } = useContext(UserContext);
   const navigate = useNavigate();
+  const { user } = useContext(UserContext);
+
   return (
     <div className="w-full flex flex-col gap-6">
       <HeaderText />

@@ -5,6 +5,7 @@ type Props = {};
 
 const Layout = (props: Props) => {
   const navigate = useNavigate();
+
   useEffect(() => {
     const item = localStorage.getItem("access_token");
     if (item) {

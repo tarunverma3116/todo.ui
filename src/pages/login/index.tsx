@@ -23,7 +23,7 @@ const Login = (props: Props) => {
     formState: { errors },
   } = useForm<Inputs>();
 
-  const onSubmit = (data: Inputs) => {
+  const onSubmit = async (data: Inputs) => {
     loginMutation.mutate(data);
   };
 

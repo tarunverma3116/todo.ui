@@ -24,15 +24,6 @@ const UseUserProvider: React.FC = ({
 }) => {
   const [user, setUser] = useState<User | null>(null);
 
-  const FetchUser = async () => {
-    const response = await api.get("/users");
-    setUser(response.data.data[0]);
-  };
-
-  useEffect(() => {
-    FetchUser();
-  }, []);
-
   return (
     <UserContext.Provider value={{ user, setUser }}>
       {children}
