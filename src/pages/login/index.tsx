@@ -6,6 +6,7 @@ import FormTextInput from "components/input/FormTextInput";
 import PrimaryButton from "components/button/Button";
 import useLoginMutation from "hooks/mutations/useLoginMutation";
 import { toast } from "react-toastify";
+import { HiLockClosed } from "react-icons/hi";
 
 type Inputs = {
   email: string;
@@ -81,6 +82,13 @@ const Login = (props: Props) => {
           <Link to="/signup" className="hover:underline">
             Dont have an account? Signup
           </Link>
+          <p className="text-red-500 flex flex-row items-center">
+            Note : Please Allow Insecure Content from &nbsp;
+            <span className="hidden lg:flex">
+              <HiLockClosed />
+            </span>{" "}
+            &nbsp; Site Settings
+          </p>
         </form>
       </div>
     </div>

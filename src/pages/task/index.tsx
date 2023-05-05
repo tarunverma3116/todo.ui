@@ -45,7 +45,6 @@ const Task = (props: Props) => {
   const FetchSubTasks = async (id: any) => {
     spinner.setLoadingState(true);
     const response = await useFetchSubTasks(id);
-    console.log(response);
     setSubTasks(response.data);
     spinner.setLoadingState(false);
   };
